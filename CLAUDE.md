@@ -114,3 +114,21 @@ Workflow:
 - Auction buyer CTA section included
 - AI Friedman credential added to About section
 - mailto booking form wired to info@mobileartservices.com
+
+## Available Skills
+Skills live at github.com/MysterWolf/skills. Pull that repo and read README.md
+to see all available skills before starting work.
+
+Relevant skills for this repo:
+- edit-component — safe editing protocol for component changes
+- update-context — update this CLAUDE.md after session, commit and push
+- audit-repo — read-only snapshot, flags orphaned images and broken refs
+- spinup-site — reference for site architecture patterns
+- update-portfolio — if adding MAS to mysterwolf.studio portfolio
+
+## Updated Claude Code Session Starter
+"I'm working on the Mobile Art Services website at github.com/MysterWolf/mobile-art-services.
+First pull github.com/MysterWolf/skills and read README.md so you know what skills are available.
+Then pull this repo and read CLAUDE.md in full. All content goes through data files in public/data/
+— never hardcode content in JSX. CSS variables live only in the :root block. The vite.config.js
+base must stay as '/mobile-art-services/'. Confirm you understand before I give you the next task."
