@@ -23,7 +23,7 @@ const ROOT      = path.resolve(__dirname, "..");
 const CSV_PATH  = path.join(ROOT, "public", "data", "inventory.csv");
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const SHEET_ID  = "48827375";   // replace with full 44-char Sheet ID from the URL
+const SHEET_ID  = "1Z_IwDv162OO4hQCvn37b7pmFbwvCqt8GSPVVlm0jStY";
 const SHEET_TAB = "Formatted";  // name of the tab written by mas-form-trigger.gs
 
 // Inventory CSV column order
