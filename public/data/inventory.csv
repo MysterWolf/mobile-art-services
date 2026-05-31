@@ -1,12 +1,12 @@
 id,filename,title,artist,medium,dimensions,price,status,category,caption,condition,source,notes,qr_url
-001,pelissier_01.jpg,Untitled 01,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-002,pelissier_02.jpg,Untitled 02,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-003,pelissier_03.jpg,Untitled 03,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-004,pelissier_04.jpg,Untitled 04,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-005,pelissier_05.jpg,Untitled 05,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-006,pelissier_06.jpg,Untitled 06,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-007,pelissier_07.jpg,Untitled 07,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-008,pelissier_08.jpg,Untitled 08,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-009,pelissier_09.jpg,Untitled 09,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-010,pelissier_10.jpg,Untitled 10,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,
-011,,Guitar,,Mrs Matthews,,18x14,25,staged,painting,,,,
+001,pelissier_01.jpg,Untitled 01,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=001
+002,pelissier_02.jpg,Untitled 02,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=002
+003,pelissier_03.jpg,Untitled 03,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=003
+004,pelissier_04.jpg,Untitled 04,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=004
+005,pelissier_05.jpg,Untitled 05,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=005
+006,pelissier_06.jpg,Untitled 06,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=006
+007,pelissier_07.jpg,Untitled 07,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=007
+008,pelissier_08.jpg,Untitled 08,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=008
+009,pelissier_09.jpg,Untitled 09,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=009
+010,pelissier_10.jpg,Untitled 10,,Mixed media,,0,available,painting,Original artwork by Patrice Pelissier,,,,https://mysterwolf.github.io/mobile-art-services/?piece=010
+011,,Guitar,,Mrs Matthews,,18x14,25,staged,painting,,,,https://mysterwolf.github.io/mobile-art-services/?piece=011
