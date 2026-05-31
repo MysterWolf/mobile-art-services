@@ -81,26 +81,29 @@ async function translateIfFrench(client, text) {
 }
 
 // ── COLUMN MAPPING ────────────────────────────────────────────────────────────
-// "Formatted" sheet columns → inventory schema
-// timestamp | title | artist | medium | dimensions | condition |
-// description | estimated_value | source | source_details
+// Actual sheet column names → inventory schema.
+// These match the Google Form question titles as exported by Google Sheets.
 function mapRow(r, index, existingCount) {
   const id = String(existingCount + index + 1).padStart(3, "0");
   return {
     id,
-    filename:   "",                                           // set manually after photo rename
-    title:      r["title"]          || "",
-    artist:     r["artist"]         || "",
-    medium:     r["medium"]         || "",
-    dimensions: r["dimensions"]     || "",
-    price:      r["estimated_value"]|| "0",
+    filename:   "",
+    title:      r["Title/Piece name"]  || r["title"]          || "",
+    artist:     r["Artist Name"]       || r["artist"]         || "",
+    medium:     r["Medium"]            || r["medium"]         || "",
+    dimensions: r["Dimensions"]        || r["dimensions"]     || "",
+    price:      r["Estimated Value"]   || r["estimated_value"]|| "0",
     status:     "staged",
-    category:   "painting",                                   // default; update in CSV if needed
-    caption:    r["description"]    || "",                    // translated below
-    condition:  r["condition"]      || "",
-    source:     [r["source"], r["source_details"]].filter(Boolean).join(" — "),
+    category:   "painting",
+    caption:    r["Description"]       || r["description"]    || "",
+    condition:  r["Condition"]         || r["condition"]      || "",
+    source:     [r["Source"] || r["source"], r["Source Details"] || r["source_details"]].filter(Boolean).join(" — "),
     notes:      "",
   };
+}
+
+function getTitle(r) {
+  return (r["Title/Piece name"] || r["title"] || "").toLowerCase().trim();
 }
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -138,7 +141,7 @@ async function main() {
 
   // 3. Filter to new entries only (dedupe by title)
   const newSheetRows = sheetRows.filter(r => {
-    const t = (r["title"] || "").toLowerCase().trim();
+    const t = getTitle(r);
     return t && !existingTitles.has(t);
   });
 
