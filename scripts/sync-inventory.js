@@ -14,6 +14,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import QRCode from "qrcode";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -21,6 +22,8 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT      = path.resolve(__dirname, "..");
 const CSV_PATH  = path.join(ROOT, "public", "data", "inventory.csv");
+const QR_DIR    = path.join(ROOT, "public", "qr");
+const SITE_BASE = "https://mysterwolf.github.io/mobile-art-services/";
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const SHEET_ID  = "1Z_IwDv162OO4hQCvn37b7pmFbwvCqt8GSPVVlm0jStY";
@@ -29,7 +32,7 @@ const SHEET_TAB = "Formatted";  // name of the tab written by mas-form-trigger.g
 // Inventory CSV column order
 const SCHEMA = [
   "id", "filename", "title", "artist", "medium", "dimensions",
-  "price", "status", "category", "caption", "condition", "source", "notes"
+  "price", "status", "category", "caption", "condition", "source", "notes", "qr_url"
 ];
 
 // ── CSV HELPERS ───────────────────────────────────────────────────────────────
@@ -129,11 +132,17 @@ async function main() {
     return;
   }
 
-  // 2. Load existing inventory
+  // 2. Load existing inventory + repair CSV header if schema has changed
   let existing = [];
   if (fs.existsSync(CSV_PATH)) {
-    const { rows } = parseCSV(fs.readFileSync(CSV_PATH, "utf8"));
-    existing = rows;
+    const raw = fs.readFileSync(CSV_PATH, "utf8");
+    const existingHeader = raw.split("\n")[0].trim();
+    if (existingHeader !== SCHEMA.join(",")) {
+      const { rows: allRows } = parseCSV(raw);
+      fs.writeFileSync(CSV_PATH, [SCHEMA.join(","), ...allRows.map(r => toCSVRow(r))].join("\n") + "\n");
+      console.log("Repaired CSV header to match current schema.");
+    }
+    existing = parseCSV(fs.readFileSync(CSV_PATH, "utf8")).rows;
   }
   const existingTitles = new Set(
     existing.map(r => (r.title || "").toLowerCase().trim()).filter(Boolean)
@@ -171,13 +180,25 @@ async function main() {
     });
   }
 
-  // 6. Append to inventory.csv
+  // 6. Generate QR codes
+  fs.mkdirSync(QR_DIR, { recursive: true });
+  console.log("Generating QR codes...");
+  for (const row of newRows) {
+    const qrUrl = `${SITE_BASE}?piece=${row.id}`;
+    const qrPath = path.join(QR_DIR, `piece-${row.id}.png`);
+    await QRCode.toFile(qrPath, qrUrl, { width: 400, margin: 2 });
+    row.qr_url = qrUrl;
+    console.log(`  [${row.id}] QR → public/qr/piece-${row.id}.png`);
+  }
+
+  // 7. Append new rows
   const needsHeader = !fs.existsSync(CSV_PATH);
   const lines = [];
   if (needsHeader) lines.push(SCHEMA.join(","));
   newRows.forEach(row => lines.push(toCSVRow(row)));
 
-  const separator = (needsHeader || !fs.readFileSync(CSV_PATH, "utf8").endsWith("\n")) ? "\n" : "";
+  const existing2 = needsHeader ? "" : fs.readFileSync(CSV_PATH, "utf8");
+  const separator = existing2.endsWith("\n") ? "" : "\n";
   fs.appendFileSync(CSV_PATH, (needsHeader ? "" : separator) + lines.join("\n") + "\n");
 
   console.log(`\nAdded ${newRows.length} row(s) to public/data/inventory.csv:`);

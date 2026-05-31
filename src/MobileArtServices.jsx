@@ -63,11 +63,11 @@ function Reveal({ children, delay = 0, style = {} }) {
   return <div ref={ref} style={{ opacity: v ? 1 : 0, transform: v ? "none" : "translateY(20px)", transition: `opacity 0.75s ease ${delay}s, transform 0.75s ease ${delay}s`, ...style }}>{children}</div>;
 }
 
-function GalleryCard({ item, index }) {
+function GalleryCard({ item, index, autoOpen = false }) {
   const [loaded, setLoaded] = useState(false);
   const [err, setErr] = useState(false);
   const [hov, setHov] = useState(false);
-  const [lightbox, setLightbox] = useState(false);
+  const [lightbox, setLightbox] = useState(autoOpen);
   const [ref, v] = useReveal();
 
   return (
@@ -126,11 +126,20 @@ function ServiceRow({ s, index }) {
 export default function MobileArtServices() {
   const [scrolled, setScrolled] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", notes: "" });
+  const [autoOpenId, setAutoOpenId] = useState(null);
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 48);
     window.addEventListener("scroll", h);
     return () => window.removeEventListener("scroll", h);
+  }, []);
+
+  useEffect(() => {
+    const piece = new URLSearchParams(window.location.search).get("piece");
+    if (piece) {
+      setAutoOpenId(piece);
+      setTimeout(() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" }), 100);
+    }
   }, []);
 
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -257,7 +266,7 @@ export default function MobileArtServices() {
           </Reveal>
           <Reveal delay={0.1}><p style={{ fontSize:15, color:"var(--mas-ink-mid)", lineHeight:1.75, fontWeight:300, maxWidth:600, marginBottom:48 }}>Original works available for purchase. Click any piece to view details and submit an inquiry. Pieces available for direct purchase — no auction house required.</p></Reveal>
           <div className="gg" style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:24 }}>
-            {gallery.map((item,i) => <GalleryCard key={item.id} item={item} index={i}/>)}
+            {gallery.map((item,i) => <GalleryCard key={item.id} item={item} index={i} autoOpen={item.id === autoOpenId}/>)}
           </div>
           <Reveal delay={0.2}><p style={{ marginTop:36, fontSize:11, color:"var(--mas-muted)", fontFamily:"var(--mas-mono)", letterSpacing:"0.06em", textAlign:"center" }}>New works added regularly · Follow us on Facebook for the latest</p></Reveal>
         </div>
