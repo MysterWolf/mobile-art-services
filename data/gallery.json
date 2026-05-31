@@ -1,32 +1,102 @@
 [
   {
-    "filename": "Gallery_install.jpg",
-    "caption": "Gallery wall installation",
-    "tag": "Gallery Wall"
+    "id": "001",
+    "src": "https://static.wixstatic.com/media/db1866_9af8d91e0b8f425d8041ead2ecc72754~mv2.jpg",
+    "title": "Untitled 01",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   },
   {
-    "filename": "118070799_1561427117372606_3462967361222066305_n.jpg",
-    "caption": "Multi-piece arrangement",
-    "tag": "Gallery Wall"
+    "id": "002",
+    "src": "https://static.wixstatic.com/media/db1866_06a0cd813d3a4bf0a5492a7011c1a01e~mv2.jpg",
+    "title": "Untitled 02",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   },
   {
-    "filename": "118200405_1558534467661871_775325294827317147_n.jpg",
-    "caption": "Residential installation",
-    "tag": "Residential"
+    "id": "003",
+    "src": "https://static.wixstatic.com/media/db1866_9fb8d8ae054e4b28b3e4dbb32517356b~mv2.jpg",
+    "title": "Untitled 03",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   },
   {
-    "filename": "361261002_757553939707546_4048140939163873219_n.jpg",
-    "caption": "Statement piece placement",
-    "tag": "Art Hanging"
+    "id": "004",
+    "src": "https://static.wixstatic.com/media/db1866_0ab849c30cbc450b96ad89c8a9f656e0~mv2_d_5412_4044_s_4_2.jpg",
+    "title": "Untitled 04",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   },
   {
-    "filename": "475181438_2762462203935752_8131044858813689329_n.jpg",
-    "caption": "Curated collection display",
-    "tag": "Curation"
+    "id": "005",
+    "src": "https://static.wixstatic.com/media/db1866_807de9a4e0fb4cb584503b61909b0c47~mv2.jpg",
+    "title": "Untitled 05",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   },
   {
-    "filename": "671267850_18523543504072903_2845484920947089027_n.jpg",
-    "caption": "Estate installation",
-    "tag": "Residential"
+    "id": "006",
+    "src": "https://static.wixstatic.com/media/db1866_3415b8d636ac48f8b42817e3ee324a97~mv2.jpg",
+    "title": "Untitled 06",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
+  },
+  {
+    "id": "007",
+    "src": "https://static.wixstatic.com/media/db1866_7c287d1977ef4939a3e25e8400bc95ce~mv2_d_4920_3972_s_4_2.jpg",
+    "title": "Untitled 07",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
+  },
+  {
+    "id": "008",
+    "src": "https://static.wixstatic.com/media/db1866_ba6e9650d8dd4fa396c93eb2e9b0cd06~mv2.jpg",
+    "title": "Untitled 08",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
+  },
+  {
+    "id": "009",
+    "src": "https://static.wixstatic.com/media/db1866_5c98d58fc5fa4ff0b5b9a5da54e73407~mv2.jpg",
+    "title": "Untitled 09",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
+  },
+  {
+    "id": "010",
+    "src": "https://static.wixstatic.com/media/db1866_8e306ae917cf454381ebe211b6613e6d~mv2.jpg",
+    "title": "Untitled 10",
+    "medium": "Mixed media",
+    "status": "available",
+    "category": "painting",
+    "caption": "Original artwork by Patrice Pelissier",
+    "price": 0
   }
 ]
