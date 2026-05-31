@@ -106,11 +106,8 @@ function mapRow(r, index, existingCount) {
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 async function main() {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    console.error("Error: ANTHROPIC_API_KEY not set.");
-    process.exit(1);
-  }
-  const client = new Anthropic({ apiKey });
+  const client = apiKey ? new Anthropic({ apiKey }) : null;
+  if (!client) console.warn("Warning: ANTHROPIC_API_KEY not set — French text will not be translated. Entries with descriptions will be flagged for manual review.");
 
   // 1. Fetch the Formatted tab as CSV
   const tabParam = encodeURIComponent(SHEET_TAB);
@@ -153,16 +150,22 @@ async function main() {
   // 4. Map to inventory schema
   const newRows = newSheetRows.map((r, i) => mapRow(r, i, existing.length));
 
-  // 5. Translate French captions
-  console.log(`Translating ${newRows.length} caption(s)...`);
-  for (const row of newRows) {
-    if (row.caption) {
-      const translated = await translateIfFrench(client, row.caption);
-      if (translated !== row.caption) {
-        console.log(`  [${row.id}] Caption translated.`);
-        row.caption = translated;
+  // 5. Translate French captions (skipped if no API key)
+  if (client) {
+    console.log(`Translating ${newRows.length} caption(s)...`);
+    for (const row of newRows) {
+      if (row.caption) {
+        const translated = await translateIfFrench(client, row.caption);
+        if (translated !== row.caption) {
+          console.log(`  [${row.id}] Caption translated.`);
+          row.caption = translated;
+        }
       }
     }
+  } else {
+    newRows.forEach(row => {
+      if (row.caption) console.warn(`  [${row.id}] "${row.title || "untitled"}" — description written as-is, may contain French. Review manually.`);
+    });
   }
 
   // 6. Append to inventory.csv
