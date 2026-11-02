@@ -99,7 +99,6 @@ Workflow:
 - **Business:** Mobile Art Services
 - **Contact:** 203-224-8524 / info@mobileartservices.com
 - **Service area:** Port Chester NY, Westchester County, Greenwich CT
-- **Key credential:** 20+ years experience, former frame designer at AI Friedman
 - **ProcessMind engagement:** September 2026 (after sister's residency ends)
 
 ## Claude Code Session Starter
@@ -112,7 +111,6 @@ Workflow:
 - 4 JSON data files created: gallery, services, info, testimonials
 - 6 gallery items active (29 images orphaned — pending inventory system)
 - Auction buyer CTA section included
-- AI Friedman credential added to About section
 - mailto booking form wired to info@mobileartservices.com
 
 ## Available Skills

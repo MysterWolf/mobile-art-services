@@ -1,102 +1,102 @@
 [
   {
     "id": "001",
-    "src": "https://static.wixstatic.com/media/db1866_9af8d91e0b8f425d8041ead2ecc72754~mv2.jpg",
-    "title": "Untitled 01",
+    "src": "/images/site/artwork-001.jpg",
+    "title": "Fisherman at dusk",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "002",
-    "src": "https://static.wixstatic.com/media/db1866_06a0cd813d3a4bf0a5492a7011c1a01e~mv2.jpg",
-    "title": "Untitled 02",
+    "src": "/images/site/artwork-002.jpg",
+    "title": "Lighthouse on the bay",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "003",
-    "src": "https://static.wixstatic.com/media/db1866_9fb8d8ae054e4b28b3e4dbb32517356b~mv2.jpg",
-    "title": "Untitled 03",
+    "src": "/images/site/artwork-003.jpg",
+    "title": "Rowboat on blue water",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "004",
-    "src": "https://static.wixstatic.com/media/db1866_0ab849c30cbc450b96ad89c8a9f656e0~mv2_d_5412_4044_s_4_2.jpg",
-    "title": "Untitled 04",
+    "src": "/images/site/artwork-004.jpg",
+    "title": "Lighthouse over turquoise sea",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "005",
-    "src": "https://static.wixstatic.com/media/db1866_807de9a4e0fb4cb584503b61909b0c47~mv2.jpg",
-    "title": "Untitled 05",
+    "src": "/images/site/artwork-005.jpg",
+    "title": "Path through the dunes",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "006",
-    "src": "https://static.wixstatic.com/media/db1866_3415b8d636ac48f8b42817e3ee324a97~mv2.jpg",
-    "title": "Untitled 06",
+    "src": "/images/site/artwork-006.jpg",
+    "title": "Skier on a snowfield",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "007",
-    "src": "https://static.wixstatic.com/media/db1866_7c287d1977ef4939a3e25e8400bc95ce~mv2_d_4920_3972_s_4_2.jpg",
-    "title": "Untitled 07",
+    "src": "/images/site/artwork-007.jpg",
+    "title": "Light breaking over the lake",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "008",
-    "src": "https://static.wixstatic.com/media/db1866_ba6e9650d8dd4fa396c93eb2e9b0cd06~mv2.jpg",
-    "title": "Untitled 08",
+    "src": "/images/site/artwork-008.jpg",
+    "title": "Green island on the horizon",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "009",
-    "src": "https://static.wixstatic.com/media/db1866_5c98d58fc5fa4ff0b5b9a5da54e73407~mv2.jpg",
-    "title": "Untitled 09",
+    "src": "/images/site/artwork-009.jpg",
+    "title": "Moonlit beach",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   },
   {
     "id": "010",
-    "src": "https://static.wixstatic.com/media/db1866_8e306ae917cf454381ebe211b6613e6d~mv2.jpg",
-    "title": "Untitled 10",
+    "src": "/images/site/artwork-010.jpg",
+    "title": "Gull over the shoreline",
+    "artist": "Patrice Pelissier",
     "medium": "Mixed media",
     "status": "available",
     "category": "painting",
-    "caption": "Original artwork by Patrice Pelissier",
-    "price": 0
+    "caption": "Original artwork by Patrice Pelissier — inquire for details and pricing."
   }
 ]
