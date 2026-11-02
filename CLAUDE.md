@@ -64,6 +64,7 @@ src/
 - **Testimonials wired but no UI** — low priority until client provides reviews
 - **Forms use mailto** — acceptable for current client volume, upgrade if needed
 - **CSS variables** — entire palette in one :root block, never hardcoded elsewhere
+- **About section is gated by `public/data/about.json`'s `published` flag** — when `false`, `AboutSection` renders nothing (not just hidden via CSS) and the page flows straight from Services to Contact; set it to `true` once the client confirms the real owner/story/credential details to show it live
 
 ## Inventory System (In Design)
 CSV schema (fixed columns, do not add columns without updating csv-to-json.js):
@@ -105,6 +106,14 @@ Workflow:
 "I'm working on the Mobile Art Services website at github.com/MysterWolf/mobile-art-services. Pull the repo and read CLAUDE.md before making any changes. All content goes through data files in public/data/ — never hardcode content in JSX. CSS variables live only in the :root block. The vite.config.js base must stay as '/mobile-art-services/'. Confirm you understand before I give you the next task."
 
 ## Changelog
+### November 2026
+- Site redesigned to match the client-approved reference (mas-design-reference.html): fixed-photo hero with scrolling panel, new Consultation section, restyled Services, black-band Contact form, artwork carousel (replacing the grid gallery) with per-piece lightbox + inquiry mailto
+- Auction buyer CTA band and prior About section removed (not part of the approved reference)
+- Jost and Dancing Script fonts + reference photos extracted to public/fonts/ and public/images/site/ (no data URIs)
+- Fixed a stale-initial-state bug so ?piece=NNN QR deep links actually auto-open the lightbox
+- New About section added (src/MobileArtServices.jsx, public/data/about.json), hidden until `published: true` — see Architecture Decisions
+- Removed all "AI Friedman" credential mentions per client request
+
 ### May 2026
 - Initial site built and deployed to GitHub Pages
 - 35 images loaded to public/images/
